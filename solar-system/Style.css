@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.sun {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgb(255, 255, 0), rgb(255, 166, 0), rgb(255, 0, 0));
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 40px yellow;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit .planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Rotasi orbit */
+.mercury.orbit { width: 125px; height: 145px; animation: rotate 3s linear infinite; }
+.venus.orbit   { width: 180px; height: 200px; animation: rotate 5s linear infinite; }
+.earth.orbit   { width: 240px; height: 250px; animation: rotate 8s linear infinite; }
+.mars.orbit    { width: 300px; height: 390px; animation: rotate 10s linear infinite; }
+.jupiter.orbit { width: 450px; height: 480px; animation: rotate 13s linear infinite; }
+.saturn.orbit  { width: 580px; height: 630px; animation: rotate 17s linear infinite; }
+.uranus.orbit  { width: 650px; height: 720px; animation: rotate 23s linear infinite; }
+.neptune.orbit { width: 800px; height: 880px; animation: rotate 27s linear infinite; }
+
+/* Warna planet */
+.planet.mercury {background: rgb(125, 125, 125); }
+.planet.venus   {background: rgb(255, 166, 0); }
+.planet.earth   {background: rgb(0, 42, 255); }
+.planet.mars    {background: rgb(255, 51, 0); }
+.planet.jupiter {background: rgba(147, 60, 60, 0.63); }
+.planet.saturn  {background: rgb(255, 230, 0); }
+.planet.uranus  {background: rgb(173, 216, 230); }
+.planet.neptune {background: rgb(4, 4, 154); }
+
+@keyframes rotate {
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+.planet.mercury {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #c0c0c0, #444444);
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px #2a2a2a;
+}
+
+.planet.venus {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #f7e6ab, #dda200); 
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 201, 6, 0.7);
+}
+
+.planet.earth {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #3a9bdc, #1d4ed8); 
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(26, 139, 252, 0.8);
+}
+.planet.earth::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 8px;
+  height: 6px;
+  background: green;
+  border-radius: 50%;
+}
+.planet.earth::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 10px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: cloud-move 5s linear infinite;
+}
+@keyframes cloud-move {
+  0%   { transform: translateX(-5px); }
+  100% { transform: translateX(10px); }
+}
+
+.planet.mars {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, #d14, #700); 
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 8px rgba(255, 50, 50, 0.6);
+}
+
+.planet.jupiter {/*model design pertama*/
+  width: 40px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #d4a373,
+    #d4a373 5px,
+    #b5651d 10px,
+    #eab676 15px
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(200,150,100,0.8);
+}
+.planet.jupiter::after {/*model design kedua*/
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 12px;
+  height: 15px;
+  background: rgb(153, 42, 42);
+  border-radius: 50%;
+  opacity: 0.7; /* transparansi bintik coklat  */
+}
+
+.planet.saturn {/*model design pertama*/
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #e0d189, #b5a642);
+  border-radius: 50%;
+  position: relative;
+}
+.planet.saturn::after {/*model design kedua*/
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 200, 0.7);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  animation: ring-spin 6s linear infinite;
+}
+@keyframes ring-spin {
+  0%   { transform: translate(-50%, -50%) rotate(20deg); }
+  100% { transform: translate(-50%, -50%) rotate(380deg); }
+}
+
+.planet.uranus {
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle, #b0e0e6, #4682b4);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.7);
+}
+.planet.uranus::after {/*model cincin*/
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 12px;
+  border: 1px solid rgba(231, 231, 231, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(90deg); /* cincin miring */
+}
+
+.planet.neptune {
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle, #3b82f6, #1e3a8a);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(25, 175, 255, 0.8);
+}
+
+/* Info box */
+#info {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  background: rgba(0,0,0,0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: none;
+}
+
+/* Tombol kontrol */
+#controls {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#controls button {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

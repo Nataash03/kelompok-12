@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulasi Sistem Tata Surya</title>
+  <title>Simulasi Tata Surya</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
   <div class="sun"></div>
 
   <!-- Orbit + Planet -->
-  <div class="orbit mercury"><div class="planet mercury" onclick="showInfo('Merkurius', 'Planet terkecil dan terdekat ke Matahari')"></div></div>
-  <div class="orbit venus"><div class="planet venus" onclick="showInfo('Venus', 'Planet terpanas, sering disebut kembaran Bumi')"></div></div>
-  <div class="orbit earth"><div class="planet earth" onclick="showInfo('Bumi', 'Satu-satunya planet yang diketahui mendukung kehidupan')"></div></div>
-  <div class="orbit mars"><div class="planet mars" onclick="showInfo('Mars', 'Planet merah, kandidat kolonisasi manusia')"></div></div>
-  <div class="orbit jupiter"><div class="planet jupiter" onclick="showInfo('Jupiter', 'Planet terbesar dengan Bintik Merah Besar')"></div></div>
-  <div class="orbit saturn"><div class="planet saturn" onclick="showInfo('Saturnus', 'Dikenal dengan cincin indah yang sangat besar')"></div></div>
-  <div class="orbit uranus"><div class="planet uranus" onclick="showInfo('Uranus', 'Planet es raksasa dengan rotasi miring')"></div></div>
-  <div class="orbit neptune"><div class="planet neptune" onclick="showInfo('Neptunus', 'Planet paling jauh, berwarna biru pekat')"></div></div>
+  <div class="orbit mercury"><div class="planet mercury"></div></div>
+  <div class="orbit venus"><div class="planet venus"></div></div>
+  <div class="orbit earth"><div class="planet earth"></div></div>
+  <div class="orbit mars"><div class="planet mars"></div></div>
+  <div class="orbit jupiter"><div class="planet jupiter"></div></div>
+  <div class="orbit saturn"><div class="planet saturn"></div></div>
+  <div class="orbit uranus"><div class="planet uranus"></div></div>
+  <div class="orbit neptune"><div class="planet neptune"></div></div>
 
   <!-- Info Box -->
   <div id="info"></div>
+
+  <!-- Tombol kontrol -->
+  <div id="controls">
+    <button onclick="showInfo('Merkurius', 'Planet terkecil dan terdekat ke Matahari')">Merkurius</button>
+    <button onclick="showInfo('Venus', 'Planet terpanas, sering disebut kembaran Bumi')">Venus</button>
+    <button onclick="showInfo('Bumi', 'Satu-satunya planet yang mendukung kehidupan')">Bumi</button>
+    <button onclick="showInfo('Mars', 'Planet merah, kandidat kolonisasi manusia')">Mars</button>
+    <button onclick="showInfo('Jupiter', 'Planet terbesar dengan Bintik Merah Besar')">Jupiter</button>
+    <button onclick="showInfo('Saturnus', 'Dikenal dengan cincin indah yang sangat besar')">Saturnus</button>
+    <button onclick="showInfo('Uranus', 'Planet es raksasa dengan rotasi miring')">Uranus</button>
+    <button onclick="showInfo('Neptunus', 'Planet paling jauh, berwarna biru pekat')">Neptunus</button>
+  </div>
 
   <script src="JS.js"></script>
 </body>
