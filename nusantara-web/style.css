@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap');
+
+:root {
+    --primary: #5a3e1b;
+    --secondary: #d4af37;
+    --dark: #1e1e1e;
+    --light: #f8f5f0;
+    --hover: #8b5e2a;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* General Sections */
+.grid-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--light);
+}
+
+.grid-section h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.grid-section h2::after {
+    content: "";
+    width: 80%;
+    height: 4px;
+    background: var(--secondary);
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+/* Opening Section */
+.opening {
+    position: relative;
+    height: 100vh;
+    background: url("img/wayang.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening .overlay {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 4rem;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    text-shadow: 0 0 15px var(--secondary);
+    animation: typing 3s steps(20, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--secondary);
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    animation: fadeInUp 2.5s ease forwards;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #5a3e1b, #d4af37);
+    box-shadow: 0 2px 10px var(--shadow-dark);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--secondary);
+    text-shadow: 0 0 8px var(--secondary);
+}
+
+.search input,
+.search select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.search input:focus,
+.search select:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px var(--secondary);
+    outline: none;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+}
+
+.card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px var(--shadow-light);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px var(--shadow-dark);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-info {
+    transform: translateY(0);
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+/* About Us Section */
+.section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: url("img/batikbg.jpg") no-repeat center/cover;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px var(--shadow-dark);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.github-logos {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.github-logos a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.github-logos a img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0) drop-shadow(0 0 8px var(--secondary));
+}
+
+/* Popup */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    animation: fadeInScale 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.popup .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .grid-section h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
