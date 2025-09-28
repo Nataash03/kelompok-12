@@ -8,3 +8,4 @@ Anggota :
 
 List Tugas
 - [Tugas 1: Web Interaktif Solar Sistem](./solar-system)
+- [Tugas UTS: Web Bertema Nusantara](./nusantara-web)
