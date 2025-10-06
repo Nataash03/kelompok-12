@@ -1,196 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javanese Culture</title>
+    <title>Javanese Culture - Explore Java's Rich Heritage</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <section class="opening" id="parallax">
-            <div class="overlay">
-                <h1 class="title">Sugeng Rawuh</h1>
-                <p class="subtitle">Welcome to Javanese Culture</p>
-            </div>
-        </section>
+    <!-- Navigation -->`
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#beranda" class="logo">Javanese Culture</a>
+            <ul class="nav-links">
+                <li><a href="#beranda">Home</a></li>
+                <li><a href="#peta-budaya">Map</a></li>
+                <li><a href="#journey">Explore</a></li>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#festival">Festival Budaya Jawa</a></li>
-                <li><a href="#warisan">Warisan Budaya Jawa</a></li>
-                <li><a href="#makanan">Makanan Khas</a></li>
-                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#about-us">About</a></li>
             </ul>
-            <div class="search">
-                <input type="text" placeholder="Cari Budaya..">
-                <select>
-                    <option value="all">Semua</option>
-                    <option value="adat">Adat</option>
-                    <option value="musik">Musik Tradisional</option>
-                    <option value="batik">Batik</option>
-                    <option value="pariwisata">Pariwisata</option>
-                    <option value="mitos">Mitos</option>
-                    <option value="legenda">Legenda</option>
-                    <option value="reog">Reog Ponorogo</option>
-                    <option value="tari">Tari Topeng</option>
-                    <option value="wayang">Wayang Kulit</option>
-                </select>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="beranda">
+        <div class="hero-content">
+            <h1 class="hero-title">Sugeng Rawuh</h1>
+            <p class="hero-subtitle">Welcome to Javanese Culture</p>
+            <p class="hero-description">Discover the timeless traditions, rich heritage, and captivating stories of Java</p>
+            <a href="#journey" class="cta-button">Begin Your Journey</a>
+        </div>
     </header>
 
-    <main id="beranda">
-        <section class="grid-section" id="festival">
-            <h2>Festival Budaya Jawa</h2>
-            <div class="card-grid">
-                <div class="card" data-category="batik">
-                    <img src="img/batik.jpg" alt="Pameran Batik">
-                    <div class="card-info">
-                        <p>Batik adalah seni pewarnaan dan penciptaan motif pada kain menggunakan malam (lilin) sebagai
-                            pelindung warna.</p>
-                    </div>
+    <main>
+        <!-- Map Section -->
+        <section class="map-section" id="peta-budaya">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Cultural Map of Java</h2>
+                    <p class="section-subtitle">Explore historical landmarks and cultural sites across the island</p>
                 </div>
-                <div class="card" data-category="adat">
-                    <img src="img/ruwatan.jpg" alt="Upacara Adat Ruwatan">
-                    <div class="card-info">
-                        <p>Ruwatan yaitu upacara adat dari Jawa untuk "membebaskan" atau "melepaskan" seseorang dari
-                            kesialan, kutukan, atau marabahaya yang disebut sukerta.</p>
-                    </div>
+                
+                <div class="map-container">
+                    <img src="img/map_jawa_placeholder.png" alt="Java Map" id="jawa-map">
+                    
+                    <!-- Map Hotspots -->
+                    <div class="map-hotspot" data-id="yogya" 
+                         data-title="Sultanate of Yogyakarta" 
+                         data-info="The cultural heart of Java, home to the Sultan's Palace and the birthplace of Gudeg. This ancient city continues to preserve Mataram Islamic traditions with grace and authenticity." 
+                         data-img="img/keraton-jogja.jpg" 
+                         style="top: 60%; left: 40%;"></div>
+                    
+                    <div class="map-hotspot" data-id="majapahit" 
+                         data-title="Majapahit Heritage - Trowulan" 
+                         data-info="Once the greatest Hindu-Buddhist kingdom in Southeast Asia, Majapahit's ruins in Trowulan reveal the glory of Java's golden age. The archaeological site preserves temples, gates, and artifacts from the 13th-15th centuries." 
+                         data-img="img/trowulan.jpg" 
+                         style="top: 60%; left: 75%;"></div>
+                    
+                    <div class="map-hotspot" data-id="cirebon" 
+                         data-title="Cirebon Arts & Culture" 
+                         data-info="A unique blend of Sundanese and Javanese traditions, Cirebon is renowned for its distinctive mask dance (Tari Topeng) and vibrant batik patterns that reflect centuries of cultural exchange." 
+                         data-img="img/taritopeng.jpg" 
+                         style="top: 45%; left: 25%;"></div>
                 </div>
-                <div class="card" data-category="musik">
-                    <img src="img/gamelan.jpg" alt="Musik Gamelan">
-                    <div class="card-info">
-                        <p>Gamelan merupakan ansambel musik tradisional Indonesia yang terdiri dari berbagai instrumen,
-                            seperti gong, gendang, dan metalofon, yang dimainkan bersama dalam satu kesatuan suara.</p>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Journey Grid Section -->
+        <section class="journey-section" id="journey">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore Our Heritage</h2>
+                    <p class="section-subtitle">Choose a topic and discover the richness of Javanese culture</p>
                 </div>
-                <div class="card" data-category="pariwisata">
-                    <img src="img/borobudur.jpg" alt="Candi Borobudur">
-                    <div class="card-info">
-                        <p>Candi Borobudur adalah candi Buddha Mahayana terbesar di dunia yang terletak di Magelang,
-                            Jawa Tengah, Indonesia,
-                            yang dibangun sekitar abad ke-9 Masehi. Candi ini merupakan monumen Buddha yang megah,
-                            dibangun dalam bentuk mandala, dan berfungsi sebagai tempat suci sekaligus model alam
-                            semesta yang menggambarkan perjalanan spiritual umat Buddha menuju pencerahan.</p>
+                
+                <div class="journey-grid">
+                    <div class="journey-card" data-topic="history">
+                        <img src="img/grid-history.jpg" alt="History">
+                        <div class="journey-overlay">
+                            <h3>History</h3>
+                            <p>Ancient Kingdoms & Dynasties</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card" data-category="mitos">
-                    <img src="img/genderuwo.jpg" alt="Makhluk Mitos Genderuwo">
-                    <div class="card-info">
-                        <p>Genderuwo adalah makhluk halus dalam mitologi Jawa yang digambarkan sebagai makhluk mirip
-                            kera besar dan kekar dengan kulit gelap dan rambut lebat.
-                            Genderuwo dikenal jahil dan suka menakut-nakuti manusia, bahkan dapat mengubah wujud menjadi
-                            manusia untuk menggoda.</p>
+                    
+                    <div class="journey-card" data-topic="pakaian">
+                        <img src="img/grid-pakaian.jpg" alt="Traditional Fashion">
+                        <div class="journey-overlay">
+                            <h3>Traditional Fashion</h3>
+                            <p>Kebaya, Batik & Royal Attire</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card" data-category="legenda">
-                    <img src="img/nyi-roro-kidul.jpg" alt="Legenda Nyi Roro Kidul">
-                    <div class="card-info">
-                        <p>Nyi Roro Kidul adalah makhluk gaib dan Ratu Laut Selatan dalam mitologi Sunda dan Jawa, yang
-                            dipercaya memiliki
-                            kekuatan untuk menguasai gelombang laut di pesisir pantai selatan Jawa.</p>
+                    
+                    <div class="journey-card" data-topic="tarian">
+                        <img src="img/grid-tarian.jpg" alt="Classical Dance">
+                        <div class="journey-overlay">
+                            <h3>Classical Dance</h3>
+                            <p>Sacred Movements & Rituals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card" data-topic="makanan">
+                        <img src="img/grid-makanan.jpg" alt="Cuisine">
+                        <div class="journey-overlay">
+                            <h3>Cuisine</h3>
+                            <p>Traditional Flavors & Recipes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card" data-topic="kesenian">
+                        <img src="img/grid-kesenian.jpg" alt="Arts">
+                        <div class="journey-overlay">
+                            <h3>Arts & Crafts</h3>
+                            <p>Wayang, Batik & More</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card" data-topic="legenda">
+                        <img src="img/grid-legend.jpeg" alt="Legends">
+                        <div class="journey-overlay">
+                            <h3>Legends & Myths</h3>
+                            <p>Timeless Folk Tales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card" data-topic="alatmusik">
+                        <img src="img/grid-musik.jpg" alt="Music">
+                        <div class="journey-overlay">
+                            <h3>Traditional Music</h3>
+                            <p>Gamelan Orchestra</p>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-card" data-topic="pariwisata">
+                        <img src="img/grid-pariwisata.jpg" alt="Tourism">
+                        <div class="journey-overlay">
+                            <h3>Tourism</h3>
+                            <p>Cultural Destinations</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="grid-section" id="warisan">
-            <h2>Warisan Budaya Jawa</h2>
-            <div class="card-grid">
-                <div class="card" data-category="reog">
-                    <img src="img/reog.jpg" alt="Seni Reog Ponorogo">
-                    <div class="card-info">
-                        <p>Reog merupakan kesenian yang menampilkan topeng singa raksasa (dadak merak) yang digerakkan
-                            dengan gigi dan leher penari. Kesenian ini berasal dari Ponorogo, Jawa Timur, dan memiliki
-                            nilai sejarah serta filosofis yang dalam. Reog adalah perpaduan antara tarian, musik, dan
-                            unsur mistis yang menjadi simbol keberanian dan solidaritas masyarakat.</p>
+        <!-- About Section -->
+        <section class="about-section" id="about-us">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About This Project</h2>
+                    <p>This website is dedicated to preserving and sharing the rich cultural heritage of Java. Through stories, images, and interactive experiences, we invite you to explore the traditions that have shaped Indonesian identity for centuries.</p>
+                    <p>Our mission is to keep these timeless traditions alive for future generations while making them accessible to the world.</p>
+                    <div class="about-footer">
+                        <p>&copy; 2025 Kelompok 12</p>
+                        <a href="https://github.com/Nataash03/kelompok-12.git" target="_blank" class="github-link">
+                            <img src="img/github.png" alt="GitHub">
+                            <span>View on GitHub</span>
+                        </a>
                     </div>
-                </div>
-                <div class="card" data-category="tari">
-                    <img src="img/taritopeng.jpg" alt="Tari Topeng Cirebon">
-                    <div class="card-info">
-                        <p>Tari Topeng Cirebon adalah kesenian tarian ritual sakral yang khas dari Cirebon, Jawa Barat,
-                            yang ditandai dengan penggunaan topeng untuk menampilkan berbagai karakter dan cerita,
-                            seperti dalam Tari Topeng Klana yang menggambarkan nafsu manusia, atau Tari Topeng Samba
-                            yang melambangkan masa kanak-kanak.</p>
-                    </div>
-                </div>
-                <div class="card" data-category="wayang">
-                    <img src="img/wayangkulit.jpg" alt="Wayang Kulit">
-                    <div class="card-info">
-                        <p>Wayang adalah seni pertunjukan tradisional asli Indonesia yang menampilkan cerita melalui
-                            boneka atau bayangan yang digerakkan oleh seorang dalang, diiringi musik gamelan. Wayang
-                            tidak hanya berfungsi sebagai hiburan, tetapi juga sebagai media pendidikan moral dan
-                            penyebaran nilai-nilai luhur. Kisah-kisahnya sering kali diambil dari epos kuno seperti
-                            Mahabharata dan Ramayana, yang digabungkan dengan cerita lokal.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid-section" id="makanan">
-            <h2>Makanan Khas</h2>
-            <div class="card-grid">
-                <div class="card" data-category="gudeg">
-                    <img src="img/gudeg.png" alt="Makanan Gudeg">
-                    <div class="card-info">
-                        <p>Gudeg adalah makanan khas Yogyakarta yang terbuat dari nangka muda yang dimasak dalam santan,
-                            gula merah, dan rempah-rempah selama berjam-jam hingga berwarna cokelat keemasan.
-                            Makanan ini memiliki cita rasa manis-gurih dan biasanya disajikan dengan nasi, areh (kuah
-                            santan), telur pindang, tahu/tempe bacem, serta sambal goreng krecek.</p>
-                    </div>
-                </div>
-                <div class="card" data-category="rawon">
-                    <img src="img/rawon.jpg" alt="Makanan Rawon">
-                    <div class="card-info">
-                        <p>Rawon adalah sup daging sapi khas Jawa Timur yang memiliki kuah berwarna hitam pekat karena
-                            penggunaan keluwak sebagai bumbu utama.
-                            Dikenal dengan rasa gurih rempah-rempahnya yang kuat dan daging yang empuk. Hidangan ini
-                            merupakan kuliner tradisional yang sudah ada sejak abad ke-10 dan pernah dinobatkan sebagai
-                            sup terenak di Asia.</p>
-                    </div>
-                </div>
-                <div class="card" data-category="pecel">
-                    <img src="img/pecel.jpg" alt="Makanan Pecel">
-                    <div class="card-info">
-                        <p>Pecel adalah makanan yang terdiri atas sayuran rebus, seperti kacang panjang, bayam, taoge
-                            yang disiram dengan kuah sambal kacang dan sebagainya.
-                            Pecel merupakan penganan khas suku Jawa yang mudah ditemukan di Jawa Timur, Daerah Istimewa
-                            Yogyakarta dan Jawa Tengah.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="about-us">
-            <h2>About Us</h2>
-            <div class="about-text">
-                <p>Website ini dibuat untuk melestarikan dan mengenalkan kembali kebudayaan Jawa pada masyarakat dengan
-                    menampilkan festival, warisan budaya, serta kuliner khas.
-                    Kami berharap dapat menjaga kekayaan tradisi yang sudah diwariskan turun-temurun.</p>
-                <div class="github-logos">
-                    <a href="https://github.com/Nataash03/kelompok-12.git" target="_blank">
-                        <img src="img/github.png" alt="Our Github">
-                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <img id="popup-img" src="" alt="">
-            <p id="popup-text"></p>
+    <!-- Modal Popup -->
+    <div class="modal" id="popup">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3 id="popup-title" class="modal-title"></h3>
+            <img id="popup-img" src="" alt="" class="modal-img">
+            <div id="popup-text" class="modal-text"></div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Javanese Culture - Preserving Heritage for Future Generations</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
