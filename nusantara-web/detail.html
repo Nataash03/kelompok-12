@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="detail-title">Javanese Culture: Detail</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Javanese Culture</a>
+            <ul class="nav-links">
+                <li><a href="index.html#beranda">Home</a></li>
+                <li><a href="index.html#journey">← Back to Topics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Detail Header -->
+        <div class="detail-header">
+            <div class="container">
+                <h1 id="detail-page-title">Detail Budaya Jawa</h1>
+                <p id="detail-page-subtitle">Diving into the depth of the biggest culture in Indonesia.</p>
+            </div>
+        </div>
+
+        <!-- Filter & Bookmark Section -->
+    <div class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="bookmarked">My Bookmarks</button>
+                <input type="text" id="search-input" placeholder="Search items..." class="search-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Content Container -->
+    <div class="detail-section">
+        <div class="container">
+            <div id="dynamic-content-list">
+                <p id="loading-message" class="loading-message">Loading content...</p>
+            </div>
+        </div>
+    </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Javanese Culture - Kelompok 12. All rights reserved.</p>
+        <a href="index.html" class="back-home-link">Back to Home</a>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>
